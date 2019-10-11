@@ -1,17 +1,21 @@
 import Component from '@ember/component';
+import { brandColorList } from '../data/colors';
 
 export default Component.extend({
 	tagName: 'main',
-	strokeWidth: '2',
-	color1: 'red',
-	color2: 'blue',
-	color3: 'yellow',
+	strokeWidth: '3',
+	activeBrandColor: null,
+	brandColorList,
+
 	change(event) {
 		this.updateStrokeWidth(event.target.value);
 		return true;
 	},
-	updateStrokeWidth (newStrokeWidth) {
-		console.log(`IN ACTION >> CHANGING TO ${newStrokeWidth}`);
+	updateStrokeWidth(newStrokeWidth) {
 		this.set('strokeWidth', newStrokeWidth)
+	},
+	updateActiveBrandColor(colorObject) {
+		console.log(`WE IN HERE COLORING >> ${JSON.stringify(colorObject)}`);
+		this.set('activeBrandColor', colorObject);
 	}
 });

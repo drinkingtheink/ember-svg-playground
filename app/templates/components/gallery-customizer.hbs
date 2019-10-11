@@ -5,8 +5,22 @@
 </div>
 
 <section class="configuration">
-	<div class="configuration__stroke_width">
-		<h3>Stroke Width: <span>{{strokeWidth}}</span></h3>
+	<div class="configuration__brand_color category">
+		<h3>Primary Brand Color:</h3>
+		
+		<section class="color-swatch-gallery">
+			{{#each brandColorList as |color|}}
+		    	<div 
+		    		class="color-swatch"
+		    		style="background-color: {{color.color}}"
+		    		
+		    	></div>
+		  	{{/each}}
+	  	</section>
+	</div>
+	<div class="configuration__stroke_width category">
+		<h3>Stroke Width:</h3>
+		<p>{{strokeWidth}}</p>
 		<input 
 			type="range" 
 			id="start" 
@@ -16,4 +30,5 @@
 		    value={{strokeWidth}}
 		>
 	</div>
+
 </section>
