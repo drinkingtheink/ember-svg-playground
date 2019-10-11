@@ -1,7 +1,6 @@
-# svg-playground
+# svg-playground w/ Ember.js & Handlebars
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Exploring rendering SVGs and making them interactive in Ember.js.
 
 ## Prerequisites
 

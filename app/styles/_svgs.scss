@@ -1,0 +1,89 @@
+// Hue and Saturation can be modified globally here.
+	// Defaults $Variables  hsl(215, 77%, 42%)
+:root {
+	--hue: 220;
+	--sat: 20%;
+
+	// $Variables - Manual over-rides for each color
+	--base1: #f6f6f6; // Light/Dark backgrounds
+
+	// Modify any of the variables below to change individual color values independant of the variables above.
+		// hsl ( hue , saturation, lightness ) 
+	--color1: hsla(var(--hue), var(--sat), 42%, 1); // Strokes
+	--color2: hsla(var(--hue), 80%, 65%, 1); // Dark fills
+	--color3: hsla(var(--hue), var(--sat), 75%, 1);//Medium fill
+	--color4: hsla(55, 75%, 65%, 1);  // Brand Highlight Fill 1
+	--color5: hsla(var(--hue), var(--sat), 92%, 1); // Really light fills
+
+	--shadow: hsla(var(--hue), var(--sat), 20%, 0.20); // Shadows
+	--highlight: hsla(var(--hue), var(--sat), 100%, 0.70); // Highlights *coins*
+	--stroke-width: 3px;
+	// Variables applied to fills and stroke classes for translation to HTML. Could possibly be done better.
+}
+
+
+.stroke1 { 
+	stroke: var(--color1);
+	stroke-width: var(--stroke-width);
+} 
+.stroke2 { 
+	stroke: var(--color2);
+	stroke-width: var(--stroke-width);
+}
+.stroke3 { 
+	stroke: var(--color3);
+	stroke-width: var(--stroke-width);
+}
+.stroke4 { 
+	stroke: var(--color4);
+	stroke-width: var(--stroke-width);
+}
+.stroke5 { 
+	stroke: var(--color5);
+	stroke-width: var(--stroke-width);
+}
+
+.noscale {
+  vector-effect: non-scaling-stroke;
+}
+
+
+@media only screen and (max-width: 1024px) {
+	.hide-small-device {
+		display: none;
+	}
+	//Scoped to lock movement. Not working.
+	.move-lock {
+		transform: translate(100px, 80px);
+		width: 100px;
+	}
+	.move-shield {
+		transform: translate(70px, 55px);
+		width: 100px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+  .stroke1,.stroke2,.stroke3,.stroke4 {
+		stroke-width: calc(var(--stroke-width)/2);
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .stroke1,.stroke2,.stroke3,.stroke4 {
+		stroke-width: calc(var(--stroke-width)*1.25);
+  }
+}
+
+.fill1 { fill: var(--color1);} 
+.fill2 { fill: var(--color2);}
+.fill3 { fill: var(--color3);}
+.fill4 { fill: var(--color4);}
+.fill5 { fill: var(--color5);}
+
+.fill-base { fill: var(--base1);}
+.stroke-base { stroke: var(--base1);}
+
+.shadow { fill: var(--shadow);}
+.highlight { fill: var(--highlight);}
+
