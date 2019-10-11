@@ -30,11 +30,21 @@ h4 {
 }
 
 /** PALETTE **/
-$color1: hsl(240, 7%, 14%);
-$color2: hsl(220, 80%, 65%);
-$color3: hsl(220, 20%, 75%);
-$color4: hsla(55, 75%, 65%, 1);
-$color5: hsl(220, 20%, 92%);
+$dark-grey: hsl(240, 7%, 14%);
+$med-grey: hsl(220, 20%, 75%); 
+$light-grey: hsl(220, 20%, 92%);
+$blue: hsl(220, 80%, 65%);
+$dark-blue: rgb(53, 31, 101);
+$yellow: hsla(55, 75%, 65%, 1);
+$green: rgb(130, 189, 65);
+$orange: rgb(242, 138, 46);
+$purple: rgb(186, 129, 184);
+
+$color1: $dark-grey;
+$color2: $blue;
+$color3: $med-grey;
+$color4: $yellow;
+$color5: $light-grey;
 
 /** SVGs Styles **/
 $stroke-width: 2px;
@@ -53,26 +63,28 @@ $stroke-width: 2px;
 
 .stroke1 { 
 	stroke: $color1;
-	stroke-width: $stroke-width;
 } 
 .stroke2 { 
 	stroke: $color2;
-	stroke-width: $stroke-width;
 }
 .stroke3 { 
 	stroke: $color3;
-	stroke-width: $stroke-width;
 }
 .stroke4 { 
 	stroke: $color4;
-	stroke-width: $stroke-width;
 }
 .stroke5 { 
 	stroke: $color5;
-	stroke-width: $stroke-width;
 }
 
 .stroke-base {
 	fill: none;
 	stroke: white;
+}
+
+
+/** CONFIG STYLES **/
+.configuration {
+	display: flex;
+	justify-content: center;
 }
