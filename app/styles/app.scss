@@ -29,12 +29,21 @@ h4 {
 	margin: 0 2em;
 }
 
+/** PALETTE **/
+$color1: hsl(240, 7%, 14%);
+$color2: hsl(220, 80%, 65%);
+$color3: hsl(220, 20%, 75%);
+$color4: hsla(55, 75%, 65%, 1);
+$color5: hsl(220, 20%, 92%);
+
 /** SVGs Styles **/
-.fill1 { fill: hsl(240, 7%, 14%);} 
-.fill2 { fill: hsl(220, 80%, 65%);}
-.fill3 { fill: hsl(220, 20%, 75%);}
-.fill4 { fill: hsla(55, 75%, 65%, 1);}
-.fill5 { fill: hsl(220, 20%, 92%);}
+$stroke-width: 2px;
+
+.fill1 { fill: $color1} 
+.fill2 { fill: $color2;}
+.fill3 { fill: $color3;}
+.fill4 { fill: $color4;}
+.fill5 { fill: $color5;}
 
 .fill-base { fill: #fff;}
 .stroke-base { stroke: hsl(240, 7%, 14%);}
@@ -43,24 +52,24 @@ h4 {
 .highlight { fill: #fff;}
 
 .stroke1 { 
-	stroke: hsl(240, 7%, 14%);
-	stroke-width: 3px;
+	stroke: $color1;
+	stroke-width: $stroke-width;
 } 
 .stroke2 { 
-	stroke: hsl(220, 80%, 65%);;
-	stroke-width: 3px;
+	stroke: $color2;
+	stroke-width: $stroke-width;
 }
 .stroke3 { 
-	stroke: hsl(220, 20%, 75%);
-	stroke-width: 3px;
+	stroke: $color3;
+	stroke-width: $stroke-width;
 }
 .stroke4 { 
-	stroke: hsla(55, 75%, 65%, 1);;
-	stroke-width: 3px;
+	stroke: $color4;
+	stroke-width: $stroke-width;
 }
 .stroke5 { 
-	stroke: hsla(220, 20%, 92%, 1);
-	stroke-width: 3px;
+	stroke: $color5;
+	stroke-width: $stroke-width;
 }
 
 .stroke-base {
