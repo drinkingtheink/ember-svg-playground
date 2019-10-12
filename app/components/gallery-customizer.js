@@ -1,11 +1,13 @@
 import Component from '@ember/component';
-import { brandColorList } from '../data/colors';
+import { brandColorList, bgColorList } from '../data/colors';
 
 export default Component.extend({
 	tagName: 'main',
 	strokeWidth: '3',
-	activeBrandColor: '',
 	brandColorList,
+	bgColorList,
+	activeBrandColor: '',
+	activeBgColor: '',
 
 	change(event) {
 		this.updateStrokeWidth(event.target.value);
@@ -18,6 +20,10 @@ export default Component.extend({
 		updateActiveBrandColor(newColor) {
 			let newColorVal = newColor.target.value;
 			this.set('activeBrandColor', newColorVal);
+		},
+		updateActiveBgColor(newColor) {
+			let newColorVal = newColor.target.value;
+			this.set('activeBgColor', newColorVal);
 		}
 	}
 });

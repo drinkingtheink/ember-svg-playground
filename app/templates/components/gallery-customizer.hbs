@@ -2,16 +2,19 @@
 	<Svg1 
 		@strokeWidth={{strokeWidth}} 
 		@activeBrandColor={{activeBrandColor}}
+		@activeBgColor={{activeBgColor}}
 		class="illo">
 	</Svg1>
 	<Svg2 
 		@strokeWidth={{strokeWidth}} 
 		@activeBrandColor={{activeBrandColor}}
+		@activeBgColor={{activeBgColor}}
 		class="illo">
 	</Svg2>
 	<Svg3 
 		@strokeWidth={{strokeWidth}} 
 		@activeBrandColor={{activeBrandColor}}
+		@activeBgColor={{activeBgColor}}
 		class="illo">
 	</Svg3>
 </div>
@@ -26,6 +29,28 @@
 		    		class="color-swatch"
 		    		style="background-color: {{color.color}}"
 		    		onclick={{action "updateActiveBrandColor"}}
+		    		value={{color.color}}
+		    	></button>
+		  	{{/each}}
+	  	</section>
+	</div>
+	<div class="configuration__bg_color category">
+		<h3>Background Color: </h3>
+		
+		<section class="color-swatch-gallery">
+			{{#each bgColorList as |color|}}
+		    	<button 
+		    		class="color-swatch"
+		    		style="background-color: {{color.color}}"
+		    		onclick={{action "updateActiveBgColor"}}
+		    		value={{color.color}}
+		    	></button>
+		  	{{/each}}
+			{{#each brandColorList as |color|}}
+		    	<button 
+		    		class="color-swatch"
+		    		style="background-color: {{color.color}}"
+		    		onclick={{action "updateActiveBgColor"}}
 		    		value={{color.color}}
 		    	></button>
 		  	{{/each}}

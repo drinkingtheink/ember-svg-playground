@@ -36,11 +36,49 @@ const brandColorList = [
 	},
 	{
 		name: 'dark-blue',
-		color: 'rgb(53, 31, 101)',
+		color: 'rgb(0, 0, 153)',
+		role: [
+			'brand'
+		]
+	},
+	{
+		name: 'red',
+		color: 'rgb(204, 0 , 0)',
 		role: [
 			'brand'
 		]
 	}
 ];
 
-export { brandColorList };
+const bgColorList = [
+	{
+		name: 'white',
+		color: 'white',
+		role: [
+			'bg'
+		]
+	},
+	{
+		name: 'light-grey',
+		color: 'hsl(220, 20%, 92%)',
+		role: [
+			'bg'
+		]
+	},
+	{
+		name: 'med-grey',
+		color: 'hsl(220, 20%, 75%)',
+		role: [
+			'bg'
+		]
+	},
+	{
+		name: 'dark-grey',
+		color: 'hsl(240, 7%, 14%)',
+		role: [
+			'bg'
+		]
+	}
+];
+
+export { brandColorList, bgColorList };
