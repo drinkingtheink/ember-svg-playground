@@ -105,7 +105,7 @@ $stroke-width: 2px;
 
 		p {
 			margin: 0;
-			padding: 0;
+			padding: 0 0 .5em 0;
 			font-size: 200%;
 		}
 	}
@@ -123,11 +123,12 @@ $swatch-dim: 50px;
 		height: $swatch-dim;
 		width: $swatch-dim;
 		margin: 0 10px 10px 0;
-		border: 3px rgba(255, 255, 255, .7) solid;
+		border: 3px rgba(0, 0, 0, .1) solid;
 		opacity: .9;
 		border-radius: 50%;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			border-color: $dark-grey;
 			cursor: pointer;
 			opacity: 1;
