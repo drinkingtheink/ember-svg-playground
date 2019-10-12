@@ -1,20 +1,33 @@
 <div class="svg-gallery">
-	<Svg1 @strokeWidth={{strokeWidth}} class="illo"></Svg1>
-	<Svg2 @strokeWidth={{strokeWidth}} class="illo"></Svg2>
-	<Svg3 @strokeWidth={{strokeWidth}} class="illo"></Svg3>
+	<Svg1 
+		@strokeWidth={{strokeWidth}} 
+		@activeBrandColor={{activeBrandColor}}
+		class="illo">
+	</Svg1>
+	<Svg2 
+		@strokeWidth={{strokeWidth}} 
+		@activeBrandColor={{activeBrandColor}}
+		class="illo">
+	</Svg2>
+	<Svg3 
+		@strokeWidth={{strokeWidth}} 
+		@activeBrandColor={{activeBrandColor}}
+		class="illo">
+	</Svg3>
 </div>
 
 <section class="configuration">
 	<div class="configuration__brand_color category">
-		<h3>Primary Brand Color:</h3>
+		<h3>Primary Brand Color: </h3>
 		
 		<section class="color-swatch-gallery">
 			{{#each brandColorList as |color|}}
-		    	<div 
+		    	<button 
 		    		class="color-swatch"
 		    		style="background-color: {{color.color}}"
-		    		
-		    	></div>
+		    		onclick={{action "updateActiveBrandColor"}}
+		    		value={{color.color}}
+		    	></button>
 		  	{{/each}}
 	  	</section>
 	</div>

@@ -4,7 +4,7 @@ import { brandColorList } from '../data/colors';
 export default Component.extend({
 	tagName: 'main',
 	strokeWidth: '3',
-	activeBrandColor: null,
+	activeBrandColor: '',
 	brandColorList,
 
 	change(event) {
@@ -14,8 +14,10 @@ export default Component.extend({
 	updateStrokeWidth(newStrokeWidth) {
 		this.set('strokeWidth', newStrokeWidth)
 	},
-	updateActiveBrandColor(colorObject) {
-		console.log(`WE IN HERE COLORING >> ${JSON.stringify(colorObject)}`);
-		this.set('activeBrandColor', colorObject);
+	actions: {
+		updateActiveBrandColor(newColor) {
+			let newColorVal = newColor.target.value;
+			this.set('activeBrandColor', newColorVal);
+		}
 	}
 });
