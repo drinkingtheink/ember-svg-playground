@@ -111,17 +111,20 @@ $stroke-width: 2px;
 	}
 }
 
+$swatch-dim: 50px;
+
 .color-swatch-gallery {
 	display: flex;
 	flex-wrap: wrap;
 
 	.color-swatch {
 		transition: all .2s;
-		height: 75px;
-		width: 75px;
+		height: $swatch-dim;
+		width: $swatch-dim;
 		margin: 0 10px 10px 0;
-		border: 3px transparent solid;
+		border: 3px rgba(255, 255, 255, .7) solid;
 		opacity: .9;
+		border-radius: 50%;
 
 		&:hover {
 			border-color: $dark-grey;
