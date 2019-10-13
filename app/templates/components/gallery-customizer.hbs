@@ -22,6 +22,12 @@
 	</Svg3>
 </div>
 
+{{#if displayClearButton}}
+	<section class="configuration clear-selections">
+		<button {{action "clearActiveColors"}}>Clear Selections</button>
+	</section>
+{{/if}}
+
 <section class="configuration">
 	<div class="configuration__brand_color category">
 		<h3>Primary Brand Color: </h3>

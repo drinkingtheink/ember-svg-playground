@@ -44,7 +44,6 @@ h4 {
 .svg-gallery {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 3em;
 }
 
 .illo {
@@ -136,5 +135,23 @@ $swatch-dim: 50px;
 	}
 }
 
+.clear-selections {
+	padding-bottom: 1em
+}
+
+button {
+	transition: all .2s;
+	text-transform: uppercase;
+	font-size: 80%;
+	padding: .5rem .75rem;
+	background: $med-grey;
+	color: $dark-grey;
+	border-radius: 10px;
+
+	&:hover {
+		background: $light-grey;
+		cursor: pointer;
+	}
+}
 
 
