@@ -3,18 +3,21 @@
 		@strokeWidth={{strokeWidth}} 
 		@activeBrandColor={{activeBrandColor}}
 		@activeBgColor={{activeBgColor}}
+		@activeStrokeColor={{activeStrokeColor}}
 		class="illo">
 	</Svg1>
 	<Svg2 
 		@strokeWidth={{strokeWidth}} 
 		@activeBrandColor={{activeBrandColor}}
 		@activeBgColor={{activeBgColor}}
+		@activeStrokeColor={{activeStrokeColor}}
 		class="illo">
 	</Svg2>
 	<Svg3 
 		@strokeWidth={{strokeWidth}} 
 		@activeBrandColor={{activeBrandColor}}
 		@activeBgColor={{activeBgColor}}
+		@activeStrokeColor={{activeStrokeColor}}
 		class="illo">
 	</Svg3>
 </div>
@@ -51,6 +54,20 @@
 		    		class="color-swatch"
 		    		style="background-color: {{color.color}}"
 		    		onclick={{action "updateActiveBgColor"}}
+		    		value={{color.color}}
+		    	></button>
+		  	{{/each}}
+	  	</section>
+	</div>
+	<div class="configuration__stroke_color category">
+		<h3>Stroke Color: </h3>
+		
+		<section class="color-swatch-gallery">
+			{{#each bgColorList as |color|}}
+		    	<button 
+		    		class="color-swatch"
+		    		style="background-color: {{color.color}}"
+		    		onclick={{action "updateActiveStrokeColor"}}
 		    		value={{color.color}}
 		    	></button>
 		  	{{/each}}

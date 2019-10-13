@@ -8,6 +8,7 @@ export default Component.extend({
 	bgColorList,
 	activeBrandColor: '',
 	activeBgColor: '',
+	activeStrokeColor: '',
 
 	change(event) {
 		this.updateStrokeWidth(event.target.value);
@@ -24,6 +25,10 @@ export default Component.extend({
 		updateActiveBgColor(newColor) {
 			let newColorVal = newColor.target.value;
 			this.set('activeBgColor', newColorVal);
+		},
+		updateActiveStrokeColor(newColor) {
+			let newColorVal = newColor.target.value;
+			this.set('activeStrokeColor', newColorVal);
 		}
 	}
 });
