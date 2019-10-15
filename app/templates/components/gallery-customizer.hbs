@@ -25,6 +25,7 @@
 <section class="configuration clear-selections">
 	{{#if displayClearButton}}
 		<button {{action "clearActiveColors"}}>Clear Selections</button>
+		<button class="primary">Save Selections</button>
 	{{/if}}
 </section>
 
@@ -66,7 +67,7 @@
 	  	</section>
 	</div>
 	<div class="configuration__stroke_color category">
-		<h3>Stroke Color: </h3>
+		<h3>BG Stroke Color: </h3>
 		
 		<section class="color-swatch-gallery">
 			{{#each bgColorList as |color|}}

@@ -148,10 +148,20 @@ button {
 	background: $light-grey;
 	color: $dark-grey;
 	border-radius: 10px;
+	margin-right: .5em;
 
 	&:hover {
 		background: $med-grey;
 		cursor: pointer;
+	}
+
+	&.primary {
+		background-color: $blue;
+		color: white;
+
+		&:hover {
+			background-color: darken( $blue, 10% )
+		}
 	}
 }
 
