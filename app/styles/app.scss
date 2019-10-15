@@ -17,6 +17,10 @@ $color3: $med-grey;
 $color4: $yellow;
 $color5: $light-grey;
 
+/** BREAKPOINTS **/
+$very-small-screen: 700px;
+$small-screen: 1000px;
+
 body,
 html {
 	margin: 0;
@@ -44,6 +48,10 @@ h4 {
 .svg-gallery {
 	display: flex;
 	justify-content: center;
+
+	@media screen and (max-width: $small-screen) {
+		display: block;
+	}	
 }
 
 .illo {
@@ -94,6 +102,10 @@ $stroke-width: 2px;
 	justify-content: center;
 	align-items: flex-start;
 
+	@media screen and (max-width: $small-screen) {
+		display: block;
+	}
+
 	.category {
 		padding: .25rem 1rem 1rem 1rem;
 		margin: 0 .5em;
@@ -101,6 +113,11 @@ $stroke-width: 2px;
 		background: $light-grey;
 		text-align: center;
 		max-width: 15%;
+
+		@media screen and (max-width: $small-screen) {
+			max-width: 90%;
+			margin-bottom: .5em;
+		}
 
 		p {
 			margin: 0;
@@ -116,6 +133,10 @@ $swatch-dim: 50px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+
+	@media screen and (max-width: $small-screen) {
+		display: block;
+	}
 
 	.color-swatch {
 		transition: all .2s;
