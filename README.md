@@ -1,4 +1,7 @@
 # svg-playground w/ Ember.js & Handlebars
+## Customize the display of SVGs-as-components
+
+![SVG Playground - customize the display of SVGs-as-components](https://gdurl.com/or-l)
 
 Exploring rendering SVGs and making them interactive in Ember.js.
 
